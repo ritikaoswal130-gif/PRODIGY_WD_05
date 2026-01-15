@@ -6,25 +6,23 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Header -->
   <header>
     <h1>🌦️ Weather App</h1>
   </header>
 
-  <!-- Search Section -->
   <main>
     <div class="search-box">
-      <input type="text" id="cityInput" placeholder="Enter city name">
-      <button onclick="getWeather()">Get Weather</button>
+      <input type="text" id="cityInput" placeholder="Enter city name (e.g., Pune)">
+      <button id="getWeatherBtn">Get Weather</button>
     </div>
 
-    <!-- Weather Result -->
+    <div id="statusMsg" class="status"></div>
+
     <div id="weatherResult" class="weather-card">
       <p>Search for a city to see weather details 🌍</p>
     </div>
   </main>
 
-  <!-- Footer -->
   <footer>
     <p>Built by Ritika | <a href="https://github.com/yourusername/PRODIGY_WD_05" target="_blank">GitHub Repo</a></p>
   </footer>
