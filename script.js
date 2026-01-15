@@ -1,7 +1,7 @@
-const apiKey = "YOUR_API_KEY"; // Replace with your OpenWeatherMap API key
+const apiKey = "d2781244d29096966ffad579ede152d3"; // 🔑 Replace with your OpenWeatherMap API key
 
 async function getWeather() {
-  const city = document.getElementById("cityInput").value;
+  const city = document.getElementById("cityInput").value.trim();
   if (!city) {
     alert("Please enter a city name");
     return;
@@ -14,7 +14,7 @@ async function getWeather() {
     const data = await response.json();
 
     if (data.cod === "404") {
-      document.getElementById("weatherResult").innerHTML = `<p>City not found ❌</p>`;
+      document.getElementById("weatherResult").innerHTML = `<p>❌ City not found</p>`;
       return;
     }
 
@@ -23,10 +23,12 @@ async function getWeather() {
       <p>🌡️ Temperature: ${data.main.temp} °C</p>
       <p>💨 Wind Speed: ${data.wind.speed} m/s</p>
       <p>☁️ Condition: ${data.weather[0].description}</p>
+      <p>🌡️ Feels Like: ${data.main.feels_like} °C</p>
+      <p>💧 Humidity: ${data.main.humidity}%</p>
     `;
 
     document.getElementById("weatherResult").innerHTML = weatherHTML;
   } catch (error) {
-    document.getElementById("weatherResult").innerHTML = `<p>Error fetching data ⚠️</p>`;
+    document.getElementById("weatherResult").innerHTML = `<p>⚠️ Error fetching data</p>`;
   }
 }
