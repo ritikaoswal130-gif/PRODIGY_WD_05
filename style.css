@@ -2,7 +2,7 @@ body {
   font-family: 'Poppins', sans-serif;
   margin: 0;
   padding: 0;
-  background: linear-gradient(120deg, #6BCB77, #FFD93D, #FF6B6B);
+  background: linear-gradient(120deg, #FF6B6B, #FFD93D, #6BCB77);
   background-size: 600% 600%;
   animation: gradientMove 15s ease infinite;
   color: #333;
@@ -38,22 +38,33 @@ header {
   font-size: 16px;
   border: none;
   border-radius: 6px;
-  background: #FF6B6B;
+  background: #6BCB77;
   color: white;
   cursor: pointer;
-  transition: transform 0.3s;
+  transition: transform 0.3s, background 0.3s;
 }
 
 .search-box button:hover {
   transform: scale(1.1);
+  background: #FFD93D;
+  color: #333;
 }
 
 .weather-card {
-  background: rgba(255,255,255,0.8);
+  background: rgba(255,255,255,0.85);
   backdrop-filter: blur(10px);
   margin: 20px auto;
   padding: 20px;
   border-radius: 12px;
   max-width: 400px;
   box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+}
+
+.weather-card h2 {
+  margin-bottom: 10px;
+}
+
+.weather-card p {
+  margin: 6px 0;
+  font-size: 18px;
 }
