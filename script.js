@@ -1,5 +1,5 @@
 // 🔑 Replace with your actual OpenWeatherMap API key
-const apiKey = "d2781244d29096966ffad579ede152d3";
+const apiKey = "4cf8075b6e2a6d9e6fa7553b562b2ffe";
 
 const statusMsg = document.getElementById("statusMsg");
 const resultBox = document.getElementById("weatherResult");
